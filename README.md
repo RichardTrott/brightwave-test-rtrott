@@ -20,7 +20,9 @@ A few debates that proved most entertaining
 ## Running the app locally
 
 ```bash
-# Install dependencies
+# clone this repo and cd into it prior to running these commands
+
+# Install dependencies (first run, and when dependencies change)
 npm install
 
 # Start the localhost app, automatically opening the target URL (https://localhost:3000) in your default browser
