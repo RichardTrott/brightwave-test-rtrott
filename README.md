@@ -1,30 +1,29 @@
-# SolidStart
+# DebateGPT
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+A single page app allowing a user to pit two OpenAI 'agents' against one another in open debate.
 
-## Creating a project
+- Optionally store your personal OpenAI API key in SessionStorage in a secure manner. You will be required to enter a passphrase once during setup and for each successive new session.
+- Utilize the streaming endpoint offered by OpenAI's API, for a more visually stimulating discourse betwixt the hapless bots.
+- Some knowledge jousts may decide a winner (by the loser declaring their concession), others will end in a draw when the number of ripostes reaches an inbuilt maximum.
+- Randomly chosen imagery to backdrop the festivities.
+
+## Some ideas
+
+A few debates that proved most entertaining
+
+- "Xylophone should start with a Z" vs "Xylophone should start with an X"
+- "Cars are good for chickens" vs "Cars are bad for chickens"
+- "The sky is blue" vs "The ocean is blue"
+- "asdf" vs "asdf" (The bots apologize profusely for misunderstanding each other and choose their own topic. lol.)
+- "My cat's breath smells like cat food" vs "Batman"
+
+## Running the app locally
 
 ```bash
-# create a new project in the current directory
-npm init solid@latest
+# Install dependencies
+npm install
 
-# create a new project in my-app
-npm init solid@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
+# Start the localhost app, automatically opening the target URL (https://localhost:3000) in your default browser
+# NOTE: you may need to provide your Operating System with elevated privileges the first run, in order for the self-signing SSL cert utility to work properly.
 npm run dev -- --open
 ```
-
-## Building
-
-Solid apps are built with _adapters_, which optimise your project for deployment to different environments.
-
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different adapter, add it to the `devDependencies` in `package.json` and specify in your `vite.config.js`.
